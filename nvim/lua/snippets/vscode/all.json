@@ -1,0 +1,23 @@
+{
+	"snip1": {
+		"prefix": "date",
+		"body": [
+			"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
+		],
+    "description": "current date:Year-Month-Date"
+	},
+  "file name": {
+    "prefix": "file",
+    "body": [
+      "$TM_FILENAME"
+    ],
+    "description": "the current file name with extension"
+  },
+  "file path": {
+    "prefix": "path",
+    "body": [
+      "$TM_FILEPATH"
+    ],
+    "description": "the current file full path"
+  }
+}

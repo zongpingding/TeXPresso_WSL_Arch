@@ -1,0 +1,332 @@
+{
+	//////// 					Basic Info				//////
+	"Test Math formula": {
+		"prefix": "TestMathFormula",
+		"body": [
+			"\\sum_{i=1}^{+\\infty}{\\int_{0}^{i}-\\frac{1}{t}\\mathrm{d}t} = \\frac{\\pi^2}{6}",
+		],
+		"description": ""
+	},
+	"basic information": {
+		"prefix": "info",
+		"body": [
+			"\\title{$1}",
+			"\\author{${2:Eureka}}",
+			"\\date{\\today}"
+		],
+		"description": ""
+	},
+	"begin environment": {
+		"prefix": "begin",
+		"body": [
+			"\\begin{$1}",
+			" $2",
+			"\\end{$1}"
+		],
+		"description": ""
+	},
+	"multicols": {
+		"prefix": "multicols",
+		"body": [
+			"\\begin{multicols}{${1:2}}",
+			"    $2",
+			"\\end{multicols}"
+		],
+		"description": ""
+	},
+	"separate rule": {
+		"prefix": "rule",
+		"body": [
+			"\\noindent\\rule{${1:.9}\\linewidth}{2pt}",
+		],
+		"description": ""
+	},
+	"colorbox": {
+		"prefix": "colorbox",
+		"body": [
+			"\\begin{tcolorbox}[colback=${1:blue}!5!${2:white},colframe=${3:blue}!75!${4:black},title=$5]",
+			" $6 ",
+			"\\end{tcolorbox}"
+		],
+		"description": ""
+	},
+	"include figure cmd": {
+		"prefix": "includefig",
+		"body": [
+			"\\includegraphics[width=$1\\linewidth]{$2}",
+		],
+		"description": ""
+	},	
+	"include figure": {
+		"prefix": "fig",
+		"body": [
+			"\\begin{figure}[!htb]",
+			"  \\centering",
+			"  \\includegraphics[width=$1\\linewidth]{$2}",
+			"  \\caption{$3}",
+			"  \\label{fig:$3}",
+			"\\end{figure}"
+		],
+		"description": ""
+	},
+
+	//////// 					math related					//////
+	"fracpartial": {
+		"prefix": "fp",
+		"body": [
+			"\\frac{\\partial $1}{\\partial $2}"
+		],
+		"description": ""
+	},
+	"align numbered": {
+		"prefix": "alg",
+		"body": [
+			"\\begin{align}",
+			"  $1",
+			"\\end{align}",
+		],
+		"description": ""
+	},
+	"left brace align env": {
+		"prefix": "lalg",
+		"body": [
+			"\\left\\{\\begin{aligned}",
+			"  $1",
+			"\\end{aligned}\\right.",
+		],
+		"description": "left brace align env"
+	},
+	"right brace align env": {
+		"prefix": "ralg",
+		"body": [
+			"\\left.\\begin{aligned}",
+			"  $1",
+			"\\end{aligned}\\right\\}",
+		],
+		"description": "right brace align env"
+	},
+	"align-no-numbered": {
+		"prefix": "lbrace",
+		"body": [
+			"\\left\\{",
+			"  $1",
+			"\\right.",
+		],
+		"description": ""
+	},
+	"diag matrix": {
+		"prefix": "diag-m",
+		"body": [
+			"\\begin{equation}",
+            "  \\begin{bmatrix}",
+            "   $1 & 0  & \\cdots & 0\\\\\\\\",
+            "   0  & $1 & \\cdots & 0\\\\\\\\",
+            "   \\cdots\\\\\\\\",
+            "   0  &    & \\cdots & $1\\\\\\\\",
+            "  \\end{bmatrix} ",
+			"\\end{equation}"
+		],
+		"description": ""
+	},
+	"horizontal matrix": {
+		"prefix": "honri-m",
+		"body": [
+			"\\begin{bmatrix}",
+			"  $1 & $1  & \\cdots & $1\\\\\\\\",
+			"  $2 & $2  & \\cdots & $2\\\\\\\\",
+			"  \\cdots\\\\\\\\",
+			"  $3 & $3  & \\cdots & $3\\\\\\\\",
+			"\\end{bmatrix} "
+		],
+		"description": ""
+	},
+	"vertical matrix": {
+		"prefix": "verti-m",
+		"body": [
+			"\\begin{bmatrix}",
+			"  $1 & $2  & \\cdots & $3\\\\\\\\",
+			"  $1 & $2  & \\cdots & $3\\\\\\\\",
+			"  \\cdots\\\\\\\\",
+			"  $1 & $2  & \\cdots & $3\\\\\\\\",
+			"\\end{bmatrix} "
+		],
+		"description": ""
+	},
+	"integreta": {
+		"prefix": "int",
+		"body": [
+			"\\int_{$1}^{$2}{$3 \\;\\mathrm{d}$4}"
+		],
+		"description": ""
+	},
+	"limit": {
+		"prefix": "lim",
+		"body": [
+			"\\lim_{$1}{$2}"
+		],
+		"description": ""
+	},
+	"minipage insert": {
+		"prefix": "sbp",
+		"body": [
+			"\\begin{figure}[!htb]",
+			"  \\begin{minipage}[t]{$1\\linewidth}",
+			"    $2",
+			"  \\end{minipage}",
+			"  \\begin{minipage}[t]{$1\\linewidth}",
+			"    $3",
+			"  \\end{minipage}",
+			"\\end{figure}"
+		],
+		"description": ""
+	},
+	"sum": {
+		"prefix": "sm",
+		"body": [
+			"\\sum_{$1}^{$2}{$3}"
+		],
+		"description": ""
+	},
+	"inlineformular": {
+		"prefix": "ll",
+		"body": [
+			"$$1$"
+		],
+		"description": ""
+	},
+
+	//////// 					TIKZ					//////
+	"standaloneplotfigure": {
+		"prefix": "tikzfig",
+		"body": [
+			"% 生成最终的图象时把第一个文档类取消注释即可",
+			"%\\documentclass[10pt,varwidth]{standalone}",
+			"\\documentclass[12pt]{article}",
+			"% 1.必须添加varwidth选项，不然就会报错",
+			"\\PassOptionsToPackage{quiet}{fontspec}",
+			"\\usepackage{ctex}",
+			"% 必须要保证绘图的纸张足够的大",
+			"\\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}",
+			"\\usepackage{xifthen}",
+			"\\usepackage{xfp}",
+			"\\usepackage{xcolor}",
+			"\\usepackage{pgfplots}",
+			"\\usepackage{pgfplotstable}",
+			"\\pgfplotsset{compat=1.16}",
+			"% 2.引用的tikz库",
+			"\\usetikzlibrary {matrix, chains, trees, decorations}",
+			"\\usetikzlibrary {arrows.meta, automata,positioning}",
+			"\\usetikzlibrary {decorations.pathmorphing, calc}",
+			"\\usetikzlibrary {calligraphy}",
+			"\\usetikzlibrary {backgrounds, mindmap,shadows}",
+			"\\usetikzlibrary {patterns, quotes, 3d, shadows}",
+			"\\usetikzlibrary {graphs, fadings, scopes}",
+			"\\usetikzlibrary {arrows, shapes.geometric}",
+			"\\usepgflibrary {shadings}",
+			"",
+			"",
+			"\\begin{document}",
+			"\\begin{tikzpicture}",
+			"  $1",
+			"\\end{tikzpicture}",
+			"\\end{document}"
+		],
+		"description": "standaloneplotfigure"
+	},
+  "basic article class": {
+    "prefix": "article",
+    "body": [
+      "\\documentclass{article}",
+      "$1",
+      "",
+      "\\begin{document}",
+      "$2",
+      "\\end{document}"
+    ],
+    "description": "basic article class"
+  },
+  "basic book class": {
+    "prefix": "book",
+    "body": [
+      "\\documentclass{book}",
+      "$1",
+      "",
+      "\\begin{document}",
+      "$2",
+      "\\end{document}"
+    ],
+    "description": "basic book class"
+  },
+	"zlatex": {
+		"prefix": "zlatex",
+		"body": [
+			"\\documentclass[lang=${1:cn}]{zlatex}",
+			"",
+			"",
+			"\\begin{document}",
+			"\\mainmatter",
+			"",
+			"$2",
+			"\\end{document}"
+		],
+		"description": "zlatex document class"
+	},
+	"Beamer basic Frame": {
+		"prefix": "beamer",
+		"body": [
+			"\\documentclass[]{beamer}",
+			"\\usepackage{Slide}",
+			"",
+			"\\title{$1}",
+			"\\author{${2:zongpingD}}",
+			"\\date{\\today}",
+			"\\logo{\\includegraphics[]{}} ",
+			"\\begin{document}",
+			"",
+			"  \\begin{frame}[plain]",
+			"    % plain不产生页眉和页脚",
+			"    \\titlepage",
+			"  \\end{frame}",
+			"  ",
+			"  \\begin{frame}{目录}",
+			"    \\tableofcontents",
+			"  \\end{frame}",
+			"",
+			"  \\begin{frame}",
+			"    $3",
+			"  \\end{frame} ",
+			"",
+			"\\end{document}"
+		],
+		"description": ""
+	},
+	"frame": {
+		"prefix": "frame",
+		"body": [
+			"\\begin{frame}",
+			"  $1",
+			"\\end{frame} "
+		],
+		"description": ""
+	},
+	"Multi columns": {
+		"prefix": "multicol",
+		"body": [
+			"\\begin{multicols}{${1:2}}",
+			"  $2",
+			"\\end{multicols}",
+		],
+		"description": ""
+	},
+	"table": {
+		"prefix": "table",
+		"body": [
+			"\\begin{tabular}{${1:ccc}}",
+			"\\toprule",
+			"$2",
+			"\\bottomrule",
+			"\\end{tabular}",
+		],
+		"description": "Create a Three lines Table; -> \\usepackage{booktabs}"
+	}
+}

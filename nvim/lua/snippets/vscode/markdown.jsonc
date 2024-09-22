@@ -1,0 +1,96 @@
+{
+	// 图片相关
+	"figuer insert": {
+		"prefix": "fig",
+		"body": [
+		  "<div align=center><img src=\"$1\" width = '${2:60%}' src =/></div>"
+		],
+		"description": "figuer insert"
+	},
+	"mermaid graph": {
+		"prefix": "mermaid",
+		"body": [
+		  "``` mermaid",
+		  "$1",
+		  "```"
+		],
+		"description": "mermaid graph"
+	},
+
+	// 文本相关
+	"center align environment": {
+		"prefix": "center",
+		"body": [
+			"<center/>",
+			"$1",
+			"</center>"
+		],
+		"description": "center environment"
+	},
+
+	"right align environment": {
+		"prefix": "right ",
+		"body": [
+		  "<div style=\"text-align: right\">",
+		  "$1",
+		  "</div>"
+		],
+		"description": "right align environment"
+	},
+	
+	"left align environment": {
+		"prefix": "left ",
+		"body": [
+			"<div style=\"text-align: left\">",
+			"$1",
+			"</div>"
+		],
+		"description": "right align environment"
+	},
+
+	"color_text environment": {
+		"prefix": "color text",
+		// 备注:div标签后必须空一行,不然会解析错误
+		"body": [
+		  "<div style=\"color: ${1:orange}\">",
+		  " ",
+		  "$2",
+		  "</div>"
+		],
+		"description": "colored text environment"
+	  },
+
+	"color box environment": {
+		"prefix": "color box",
+		"body": [
+			"<div class=\"colorbox_${1:green}\">",
+			"",
+			"$2",
+			"</div>"
+		],
+		"description": "color box environment"
+	},
+
+
+
+	// 数学公式相关 
+	"DisPlay Math": {
+		"prefix": "alg",
+		"body": [
+			"\\$\\$",
+			"\\begin{align}",
+			"$1",
+			"\\end{align}",
+			"\\$\\$",
+		],
+		"description": "居中图片"
+	},
+
+	"Inline Math": {
+		"prefix": "ll",
+		"body": [
+			"\\$$1\\$",
+		],
+		"description": "居中图片"
+	},
+}
