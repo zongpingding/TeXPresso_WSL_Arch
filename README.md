@@ -1,7 +1,7 @@
 # TeXPresso_WSL_Arch
 A precompile texpresso in WSL2 base on Arch Linux. ScreenShot:
 
-![TexPresso example](./../texpresso.gif)
+![TexPresso example](./texpresso.gif)
 
 ## binary and dotfile
 
